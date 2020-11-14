@@ -4,44 +4,13 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
 
-    <body onload="change()">
+    <body">
         <div id="screen">
-            <button class="prev" onclick="prev()"><</button>
-            <button class="next" onclick="next()">></button>
+            <button class="prev" onclick="prevAnimation()"><</button>
+            <button class="next" onclick="nextAnimation()">></button>
             <div id="properscreen"></div>
         </div>
-
-        <script>
-var img = ["<img src='https://i.pinimg.com/originals/91/9c/57/919c5719579d855d1fa9e1c128a80d64.jpg'>", 
-"<img src='https://uhdwallpapers.org/uploads/converted/19/08/03/huawei-mediapad-m6-stock-wallpaper-1280x720_666874-mm-90.jpg'>", 
-"<img src='https://images.wallpapersden.com/image/download/astronaut-exploring-space_a2lmZ26UmZqaraWkpJRmZ21lrWxnZQ.jpg'>", 
-"<img src='https://images.wallpapersden.com/image/download/night-mountains-summer-illustration_a2plamaUmZqaraWkpJRmZ21lrWxnZQ.jpg'>"];
-
-var i = 0;
-function change() {
-    document.getElementById("properscreen").innerHTML = img[i];
-}
-
-function prev() {
-    if (i == 0) {
-        i = img.length - 1;
-    } else {
-        i = i - 1;
-    }
-
-    document.getElementById("properscreen").innerHTML = img[i];
-}
-
-function next() {
-    if (i == img.length - 1) {
-        i = 0;
-    } else {
-        i = i + 1;
-    }
-
-    document.getElementById("properscreen").innerHTML = img[i];
-}
-
-        </script>
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
     </body>
 </html>
