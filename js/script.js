@@ -1,7 +1,8 @@
 var img = ["<img src='https://i.pinimg.com/originals/91/9c/57/919c5719579d855d1fa9e1c128a80d64.jpg'>", 
 "<img src='https://uhdwallpapers.org/uploads/converted/19/08/03/huawei-mediapad-m6-stock-wallpaper-1280x720_666874-mm-90.jpg'>", 
 "<img src='https://images.wallpapersden.com/image/download/astronaut-exploring-space_a2lmZ26UmZqaraWkpJRmZ21lrWxnZQ.jpg'>", 
-"<img src='https://images.wallpapersden.com/image/download/night-mountains-summer-illustration_a2plamaUmZqaraWkpJRmZ21lrWxnZQ.jpg'>"];
+"<img src='https://images.wallpapersden.com/image/download/night-mountains-summer-illustration_a2plamaUmZqaraWkpJRmZ21lrWxnZQ.jpg'>",
+"<img src='https://images.hdqwalls.com/download/8-bit-pixel-art-city-2o-1280x720.jpg'>"];
 
 var i = 0;
 var lock=false;
