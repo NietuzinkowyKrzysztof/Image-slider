@@ -4,6 +4,8 @@ var img = ["<img src='https://i.pinimg.com/originals/91/9c/57/919c5719579d855d1f
 "<img src='https://images.wallpapersden.com/image/download/night-mountains-summer-illustration_a2plamaUmZqaraWkpJRmZ21lrWxnZQ.jpg'>"];
 
 var i = 0;
+var lock=false;
+
 /*function change() {
     if(i==img.length-1) i=0;
     document.getElementById("properscreen").innerHTML = img[i];
@@ -12,8 +14,13 @@ var i = 0;
   setTimeout("change()", 3000);
   setTimeout("hide()", 2700);
 }
-Fuction for automatic change of image (Work in progress :P)
-*/
+Fuction for automatic change of image (Work in progress :P)*/
+
+
+function unlock(){
+    lock=false;
+}
+
 function show(){
     $("#properscreen").fadeIn(300);
     }
@@ -41,12 +48,18 @@ function next() {
 }
 
 function nextAnimation(){
+    if(!lock){
+    lock=true;
     $("#properscreen").fadeOut(200);
     setTimeout("next()",200)
-    setTimeout("show()",200)   
+    setTimeout("show()",200)
+    setTimeout("unlock()",600)
 }
+}
+
  function prevAnimation(){
     $("#properscreen").fadeOut(200);
     setTimeout("prev()",200)
     setTimeout("show()",200) 
+    setTimeout("unlock()",600)
  }
