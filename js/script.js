@@ -40,7 +40,7 @@ function prev() {
 } else {
         i = i - 1;
     }
-
+    
     document.getElementById("properscreen").innerHTML = img[i];
 }
 
@@ -52,8 +52,6 @@ function next() {
     }
     $("#properscreen").fadeOut(300);
     document.getElementById("properscreen").innerHTML = img[i];
-    dots();
-    
 }
 
 function nextAnimation(){
@@ -67,10 +65,12 @@ function nextAnimation(){
 }
 
  function prevAnimation(){
+    if(!lock){
+    lock=true;
     $("#properscreen").fadeOut(200);
     setTimeout("prev()",200)
     setTimeout("show()",200) 
-    setTimeout("unlock()",600)
+    setTimeout("unlock()",600)}
  }
 
 
