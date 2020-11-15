@@ -17,6 +17,7 @@ var lock=false;
 }
 Fuction for automatic change of image (Work in progress :P)*/
 
+document.getElementById("dot1").style.backgroundColor="red";
 
 function unlock(){
     lock=false;
@@ -24,6 +25,11 @@ function unlock(){
 
 function show(){
     $("#properscreen").fadeIn(300);
+    if(i==0) dot1();
+    if(i==1) dot2();
+    if(i==2) dot3();
+    if(i==3) dot4();
+    if(i==4) dot5();
     }
 
 document.getElementById("properscreen").innerHTML = img[i];
@@ -46,6 +52,8 @@ function next() {
     }
     $("#properscreen").fadeOut(300);
     document.getElementById("properscreen").innerHTML = img[i];
+    dots();
+    
 }
 
 function nextAnimation(){
@@ -64,3 +72,52 @@ function nextAnimation(){
     setTimeout("show()",200) 
     setTimeout("unlock()",600)
  }
+
+
+function dot1(){
+        document.getElementById("dot1").style.backgroundColor="red";
+        document.getElementById("dot2").style.backgroundColor="black";
+        document.getElementById("dot3").style.backgroundColor="black";
+        document.getElementById("dot4").style.backgroundColor="black";
+        document.getElementById("dot5").style.backgroundColor="black";
+   
+}
+
+
+function dot2(){
+    document.getElementById("dot1").style.backgroundColor="black";
+    document.getElementById("dot2").style.backgroundColor="red";
+    document.getElementById("dot3").style.backgroundColor="black";
+    document.getElementById("dot4").style.backgroundColor="black";
+    document.getElementById("dot5").style.backgroundColor="black";
+
+}
+
+
+function dot3(){
+    document.getElementById("dot1").style.backgroundColor="black";
+    document.getElementById("dot2").style.backgroundColor="black";
+    document.getElementById("dot3").style.backgroundColor="red";
+    document.getElementById("dot4").style.backgroundColor="black";
+    document.getElementById("dot5").style.backgroundColor="black";
+
+}
+
+function dot4(){
+    document.getElementById("dot1").style.backgroundColor="black";
+    document.getElementById("dot2").style.backgroundColor="black";
+    document.getElementById("dot3").style.backgroundColor="black";
+    document.getElementById("dot4").style.backgroundColor="red";
+    document.getElementById("dot5").style.backgroundColor="black";
+
+}
+
+function dot5(){
+    document.getElementById("dot1").style.backgroundColor="black";
+    document.getElementById("dot2").style.backgroundColor="black";
+    document.getElementById("dot3").style.backgroundColor="black";
+    document.getElementById("dot4").style.backgroundColor="black";
+    document.getElementById("dot5").style.backgroundColor="red";
+
+}
+
